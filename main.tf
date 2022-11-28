@@ -28,7 +28,7 @@ resource "azurerm_service_plan" "app-service-plan" {
 }
 
 resource "azurerm_linux_web_app" "app" {
-    name = "app-dhbw-devops"
+    name = "app-dhbw-devops-1234sdafj"
     resource_group_name = azurerm_resource_group.rg-dhbw-devops.name
     location = azurerm_resource_group.rg-dhbw-devops.location
     service_plan_id = azurerm_service_plan.app-service-plan.id
