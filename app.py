@@ -21,7 +21,7 @@ def hello():
 
    if name:
        print('Request for hello page received with name=%s' % name)
-       return render_template('hello.html', name = name)
+       return render_template('hello.html', name = generate_greeting(name))
    else:
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
@@ -29,3 +29,9 @@ def hello():
 
 if __name__ == '__main__':
    app.run()
+   
+def add(a,b):
+    return a+b
+
+def generate_greeting(name):
+    return "Hello " + name
