@@ -36,7 +36,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: '<webapp_name>'
+          app-name: 'app-dhbw-devops-1234sdafj'
           slot-name: 'production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE}}
-          images: ${{ secrets.DOCKER_HUB_USERNAME }}/<docker_repository>:${{ github.sha }}'
+          images: ${{ secrets.DOCKER_HUB_USERNAME }}/devops:${{ github.sha }}
